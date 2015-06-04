@@ -1,8 +1,7 @@
-package com.javarush.test.level05.lesson07.task05;
+package com.javarush.test.level05.lesson09.task05;
 
 /* Создать класс прямоугольник (Rectangle)
-Создать класс прямоугольник (Rectangle). Его данными будут top, left, width, height
-(левая координата, верхняя, ширина и высота). Создать для него как можно больше методов initialize(…)
+Создать класс прямоугольник (Rectangle). Его данными будут top, left, width, height (левая координата, верхняя, ширина и высота). Создать для него как можно больше конструкторов:
 Примеры:
 -	заданы 4 параметра: left, top, width, height
 -	ширина/высота не задана (оба равны 0)
@@ -14,35 +13,34 @@ public class Rectangle
 {
     int top, left, width, height;
 
-    public void initialize(int top, int left, int width, int height)
+    public Rectangle(int top, int width, int left, int height)
     {
         this.top = top;
-        this.left = left;
         this.width = width;
+        this.left = left;
         this.height = height;
     }
 
-    public void initialize (int top, int left)
+    public Rectangle(int top, int left)
     {
-        this.height = 0;
         this.top = top;
         this.left = left;
         this.width = 0;
+        this.height = 0;
     }
 
-    public void initialize(int top, int left, int width)
+    public Rectangle(int top, int left, int width)
     {
         this.top = top;
         this.left = left;
         this.width = width;
         this.height = width;
     }
-
-    public void initialize(Rectangle newRectangle)
-    {
+    public Rectangle(Rectangle newRectangle){
         this.top = newRectangle.top;
         this.left = newRectangle.left;
         this.width = newRectangle.width;
         this.height = newRectangle.height;
     }
 }
+
