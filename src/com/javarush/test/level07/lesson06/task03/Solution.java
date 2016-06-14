@@ -16,14 +16,21 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         ArrayList<String> strMas = new ArrayList<String>();
+        ArrayList<String> strMas2 = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int i = 0;
         String temp;
         while(i < 5){
             strMas.add(reader.readLine());
+            i++;
+        }
+        i = 0;
+        while(i < strMas.size()){
+            if(strMas.get(i).length() < strMas.get(i+1).length()){
+                strMas2.add(strMas.get(i));
+            }
 
         }
-
         //напишите тут ваш код
 
     }
