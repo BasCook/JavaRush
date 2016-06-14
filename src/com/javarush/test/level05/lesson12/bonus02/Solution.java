@@ -16,10 +16,16 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int a = Integer.parseInt(reader.readLine());
         int b = Integer.parseInt(reader.readLine());
+        int c = Integer.parseInt(reader.readLine());
+        int d = Integer.parseInt(reader.readLine());
+        int e = Integer.parseInt(reader.readLine());
 
         int minimum = min(a, b);
+        int minimum1 = min(c, d);
+        int minimum2 = min(minimum1, minimum);
+        int minimum3 = min(minimum2, e);
 
-        System.out.println("Minimum = " + minimum);
+        System.out.println("Minimum = " + minimum3);
     }
 
 
