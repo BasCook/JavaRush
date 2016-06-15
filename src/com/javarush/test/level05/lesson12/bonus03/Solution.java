@@ -15,23 +15,7 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int i;
-        int maximum = 0;
-        if(N <= 0)
-            System.out.println("Введите положительное число");
-        else
-        {
-            int[]mass = new int[N];
-            for (i = 0; i < N; i++)
-            {
-                mass[i] = sc.nextInt();
-                if (mass[i] > maximum)
-                    maximum = mass[i];
-            }
-        }
-        System.out.println(maximum);
+
     }
-    }
+
 }
