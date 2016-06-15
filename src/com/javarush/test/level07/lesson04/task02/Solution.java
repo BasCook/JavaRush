@@ -2,10 +2,8 @@ package com.javarush.test.level07.lesson04.task02;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
 
 /* Массив из строчек в обратном порядке
 1. Создать массив на 10 строчек.
@@ -17,16 +15,25 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        String[] strMas = new String[10];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[] mas = new String[10];
-        for (int i = 0; i < 8; i++){
-            mas[i] = reader.readLine();
+        int i =0;
+        while (i < 10)
+        {
+            strMas[i]= null;
+            i++;
         }
-        Arrays.sort(mas);
-        for (int i = 0; i < 10; i++){
-            System.out.println(mas[i]);
+        i = 0;
+        while (i < 8)
+        {
+            strMas[i] = reader.readLine();
+            i++;
         }
-        //напишите тут ваш код
-
+        i = strMas.length-1;
+        while (i >= 0)
+        {
+            System.out.println(strMas[i]);
+            i--;
+        }
     }
 }
