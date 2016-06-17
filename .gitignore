@@ -1,4 +1,4 @@
 # игнорировать все файлы в каталоге build/
 .idea/
-out/
+out/JavaRushPlugin.properties
 src/JavaRushPlugin.properties
