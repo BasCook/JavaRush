@@ -14,6 +14,27 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        int[] intMas = new int[10];
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        for (int i = 0; i < 10; i++)
+        {
+            intMas[i] = Integer.parseInt(reader.readLine());
+        }
+
+        int i = 0;
+        int temp;
+        while (i < intMas.length/2)
+        {
+            temp = intMas[intMas.length-1-i];   //last element
+            intMas[intMas.length-1-i] = intMas[i];  //
+            intMas[i] = temp;
+            i++;
+        }
+        for (int z = 0; z < intMas.length; z++)
+        {
+            System.out.println(intMas[z]);
+        }
+
         //напишите тут ваш код
 
     }

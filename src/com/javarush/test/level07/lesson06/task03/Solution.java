@@ -15,23 +15,34 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        ArrayList<String> strMas = new ArrayList<String>();
-        ArrayList<String> strMas2 = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int i = 0;
-        String temp;
-        while(i < 5){
-            strMas.add(reader.readLine());
-            i++;
+        ArrayList<String> str = new ArrayList<String>();
+        for (int i = 0; i < 5; i++)
+        {
+            str.add(reader.readLine());
         }
-        i = 0;
-        while(i < strMas.size()){
-            if(strMas.get(i).length() < strMas.get(i+1).length()){
-                strMas2.add(strMas.get(i));
+        String temp = str.get(0);
+        int z = 0;
+
+        for (String a : str)
+        {
+            if (temp.length() > a.length())
+            {
+                temp = a;
             }
 
+
+        }
+        for (String t : str)
+        {
+            if (t.length() == temp.length())
+            {
+                z = z + 1;
+            }
         }
         //напишите тут ваш код
+        for (int n = 0; n < z; n++)
+            System.out.println(temp);
 
     }
 }

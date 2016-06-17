@@ -3,7 +3,6 @@ package com.javarush.test.level07.lesson06.task02;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 /* Самая длинная строка
 1. Создай список строк.
@@ -16,16 +15,33 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        List<String> lstr = new ArrayList<String>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int i = 0;
-        while( i < 5 ){
-            lstr.add(reader.readLine());
-            i++;
+        ArrayList<String> str = new ArrayList<String>();
+        for (int i = 0; i < 5; i++)
+        {
+            str.add(reader.readLine());
         }
-        i = 0;
+        String temp = "";
+        int z = 0;
+
+        for (String a : str)
+        {
+            if (temp.length() < a.length())
+            {
+                temp = a;
+            }
 
 
-
+        }
+        for (String t : str)
+        {
+            if (t.length() == temp.length())
+            {
+                z = z + 1;
+            }
+        }
+        //напишите тут ваш код
+        for (int n = 0; n < z; n++)
+        System.out.println(temp);
     }
 }
