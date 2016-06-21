@@ -2,3 +2,4 @@
 .idea/
 out/production/JavaRushHomeWork
 src/JavaRushPlugin.properties
+.gitignore

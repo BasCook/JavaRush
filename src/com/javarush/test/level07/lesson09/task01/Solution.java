@@ -18,11 +18,39 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));      //напишите тут ваш код
+        ArrayList<Integer> x3 = new ArrayList<Integer>();
+        ArrayList<Integer> x2 = new ArrayList<Integer>();
+        ArrayList<Integer> xAll = new ArrayList<Integer>();
+        for (int i = 0; i < 20; i++)
+        {
+            int temp = Integer.parseInt(reader.readLine());
+            if ( temp % 3 == 0 && temp % 2 == 0)
+            {
+                x3.add(temp);
+                x2.add(temp);
+                continue;
+            }
+            if (temp % 3 == 0){
+                x3.add(temp);
+                continue;
+            }
+            if (temp % 2 == 0)
+            {
+                x2.add(temp);
+                continue;
+            }
+            xAll.add(temp);
+        }
+
+        printList(x3);
+        printList(x2);
+        printList(xAll);
     }
 
     public static void printList(List<Integer> list)
     {
-        //напишите тут ваш код
+        for ( int i = 0; i < list.size(); i++)
+       System.out.println(list.get(i)); //напишите тут ваш код
     }
 }
